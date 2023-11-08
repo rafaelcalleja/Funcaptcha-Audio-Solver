@@ -48,7 +48,7 @@ class funcaptcha:
 
     def __init__(self, public_key, site, transcriber: AudioTranscriber, proxies: dict = None, url: str ="https://api.funcaptcha.com"):
         self.session = requests.Session()
-        self.user_agent = "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36"
+        self.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36"
         self.url = url
         self.public_key = public_key
         self.site = site
