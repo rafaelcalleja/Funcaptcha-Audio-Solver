@@ -1,6 +1,10 @@
 from abc import abstractmethod, ABC
 
-import whisper
+try:
+    import whisper
+except ImportError:
+    pass
+
 import re
 
 import requests, random, string, time

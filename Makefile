@@ -1,5 +1,7 @@
 .EXPORT_ALL_VARIABLES:
 
+DOCKER_BUILDKIT ?= 0
+
 WHISPER_TAG ?= latest
 WHISPER_IMAGE ?= onerahmet/openai-whisper-asr-webservice:$(WHISPER_TAG)
 WHISPER_PORT ?= 9001
