@@ -55,6 +55,7 @@ async def token(
         public_key: str = Query(description="FunCaptcha public key"),
         service_url: Union[str, None] = Query(default="https://roblox-api.arkoselabs.com", description="Some websites can have a custom service URL"),
         proxy: Union[str, None] = Query(default=None, description="A proxy to fetch the token, usually not required"),
+        ssl_verify: bool = Query(default=True, description="Verify SSL Certificate"),
 ):
     proxies = None
     if proxy:
@@ -67,5 +68,6 @@ async def token(
         public_key=public_key,
         site=service_url,
         transcriber=WhisperWebService(endpoint=WHISPER_WEBSERVICE_ENDPOINT),
-        proxies=proxies
+        proxies=proxies,
+        ssl_verify=ssl_verify,
     ).solve()
